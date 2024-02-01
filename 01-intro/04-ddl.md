@@ -7,6 +7,10 @@ A Data Definition Language is:
 - a **SYNTAX**. 
 - a set of statements that allow the user to define or modify data structures and objects, such as tables. 
 
+- CREATE
+- ALTER
+- DROP
+
 **Commands** : 
 
 1. CREATE statement
