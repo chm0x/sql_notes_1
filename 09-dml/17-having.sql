@@ -40,6 +40,27 @@ GROUP BY emp_no
 HAVING AVG(salary) > 120000
 ORDER BY emp_no;
 
+-- USING LEFT JOINS
+SELECT e.first_name, AVG(s.salary) AS avg_salary
+FROM salaries AS s
+LEFT JOIN employees AS e
+ON e.emp_no = s.emp_no
+WHERE e.emp_no = s.emp_no
+GROUP BY s.emp_no
+HAVING AVG(s.salary) > 120000
+ORDER BY e.emp_no;
+
+SELECT e.first_name, AVG(s.salary) AS avg_salary
+FROM salaries AS s
+INNER JOIN employees AS e
+ON e.emp_no = s.emp_no
+-- WHERE e.emp_no = s.emp_no
+GROUP BY s.emp_no
+HAVING AVG(s.salary) > 120000;
+
+
+----------------------------------------
+
 --- NOPE, IT DOES NOT OPERATE THE AVG.
 SELECT emp_no,AVG(salary)
 FROM salaries

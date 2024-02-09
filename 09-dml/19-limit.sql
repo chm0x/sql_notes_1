@@ -1,0 +1,11 @@
+-- LAST LESSON: LIMIT
+
+SELECT * 
+FROM salaries 
+ORDER BY salary DESC
+LIMIT 10;
+
+-- EXERCISE
+SELECT * FROM dept_emp
+LIMIT 100;
+
