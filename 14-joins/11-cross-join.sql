@@ -70,3 +70,41 @@ ON
 WHERE 
     d.dept_no != dm.dept_no
 ORDER BY dm.emp_no, d.dept_no;
+
+
+-- EXERCISE 1
+/*
+    return a list with all possible 
+    combinations between managers from the 
+    dept_manager table and department number 9.
+*/
+SELECT 
+    m.*, 
+    d.*
+FROM 
+    dept_manager AS m
+CROSS JOIN
+    departments AS d 
+WHERE 
+    d.dept_no = 'd009'
+ORDER BY d.dept_no;
+
+-- EXERCISE 2
+/*
+    Return a list with the first 10 employees 
+    with all the departments they can be assigned to.
+    (Don't use the Limit, use WHere clause)
+*/
+DESC employees;
+DESC departments;
+
+SELECT 
+    e.*,
+    d.*
+FROM 
+    employees AS e
+CROSS JOIN 
+    departments AS d
+WHERE 
+    e.emp_no < 10011
+ORDER BY e.emp_no, d.dept_name;
