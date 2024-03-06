@@ -12,6 +12,16 @@ ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DI
 
 ## Solution
 
+First, show Global Variable:
+```
+SELECT @@global.sql_mode
+```
+
+Result: 
+```
+'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+```
+
 1. Terminal
 ```
 # Error - Someone doesnt exists

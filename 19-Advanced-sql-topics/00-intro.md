@@ -57,3 +57,19 @@ Variables that can be set by the user manually.
 ### SYSTEM
 
 Variables that are pre-defined on the system, the MYSQL server.
+
+## MySQL TRIGGERS
+
+A type of stored program, associated with a table, that will be activated automatically once a specific event occurs. 
+
+This event must be related to the associated table and represented by one of the following three DML statements:
+
+    1. INSERT
+    2. UPDATE
+    3. DELETE
+
+There are *two types of triggers*:
+1. BEFORE TRIGGER 
+2. AFTER TRIGGER.
+
+A trigger is a MySQL object that can 'trigger' a specific action or calculation 'before' or 'after' an INSERT, UPDATE or DELETE statement has been executed. 
